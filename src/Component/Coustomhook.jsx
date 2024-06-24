@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-
+import { useToggle } from "../hook"
+import { useInputValue } from "../hook"
 const Coustomhook = () => {
-  const [isTrue, setIsTrue] = useState(true)
-  const [name, setName] = useState("")
+  const [isTrue, toggledark] = useToggle(true)
+  const nameInput = useInputValue("")
   return (
     <>
       <div
@@ -11,12 +12,12 @@ const Coustomhook = () => {
           color: isTrue ? "white" : "black",
         }}
       >
-        <h1>Hello My name is {name} and i am from nepal</h1>
-        <input type="text" onClick={(e) => setName(e.target.value)} />
+        <h1>Hello My name is jeevan poudel and i am from nepal</h1>
+        <input {...nameInput} />
         <br />
         <br />
 
-        <button onClick={() => setIsTrue((d) => !d)}>darkmode</button>
+        <button onClick={toggledark}>darkmode</button>
       </div>
     </>
   )
