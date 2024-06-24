@@ -4,6 +4,7 @@ import React, { useState } from "react"
 // import Function from './Component/Function'
 // import Hide_Show from './Component/Hide_Show'
 // import Handlejson from "./Component/Handlejson"
+import Coustomhook from "./Component/Coustomhook"
 import Todo from "./Component/Todo"
 const App = () => {
   // The useState hideShow is used to make a toogle in between button
@@ -15,14 +16,14 @@ const App = () => {
     <>
       {/* <Function/> */}
       {/* <State/> */}
-
+      <Coustomhook />
       {/* <button onClick={ ()=>setHideShow(s=>!s)}>Hide-Show</button>
        <br />
        <br />
        
         {component} */}
       {/* <Render/> */}
-      <Todo />
+      {/* <Todo /> */}
       {/* <Handlejson /> */}
     </>
   )
